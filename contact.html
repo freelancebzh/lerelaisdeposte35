@@ -23,37 +23,56 @@
         </nav>
     </header>
 
-    <main>
-        <section class="page-title">
-            <h1>Contactez-nous</h1>
-            <p>Une question ou une demande de réservation spécifique ? Écrivez-nous.</p>
-        </section>
+ <main class="container">
 
-        <section class="contact-container">
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Nom complet</label>
-                    <input type="text" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Adresse email</label>
-                    <input type="email" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Votre message (Indiquez vos dates souhaitées)</label>
-                    <textarea id="message" rows="6" required></textarea>
-                </div>
-                <button type="submit" class="btn">Envoyer la demande</button>
-            </form>
+    <div class="page-header">
+        <h1>Contact & Demande de rappel</h1>
+        <p>Vous souhaitez réserver ou obtenir des informations ? Remplissez le formulaire ci-dessous. Nous pouvons également vous rappeler gratuitement.</p>
+    </div>
 
-            <div class="contact-info">
-                <h3>Nos Coordonnées</h3>
-                <p>📍 Adresse : [Votre Adresse, Code Postal Ville]</p>
-                <p>📞 Téléphone : [Votre Numéro]</p>
-                <p>✉️ Email : [Votre Email]</p>
+    <section class="about-section">
+        <form action="https://api.web3forms.com/submit" method="POST" style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
+            
+            <input type="hidden" name="access_key" value="0aa7ea9f-479c-4724-b68a-9ea5fe0b7240">
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <label style="font-weight: bold; color: var(--text-dark);">Nom & Prénom *</label>
+                <input type="text" name="nom" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
             </div>
-        </section>
-    </main>
+
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <label style="font-weight: bold; color: var(--text-dark);">Votre adresse e-mail *</label>
+                <input type="email" name="email" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+            </div>
+
+            <div class="services-block" style="padding: 1.5rem; margin: 0; background-color: #f9f9f9;">
+                <h3 style="margin-top: 0; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">📞 Souhaitez-vous être rappelé ?</h3>
+                <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #666;">Si vous préférez un échange téléphonique, indiquez votre numéro et vos disponibilités.</p>
+                
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem;">
+                    <label style="font-size: 0.95rem;">Numéro de téléphone</label>
+                    <input type="tel" name="telephone_rappel" placeholder="Ex: +357 99 000000 ou 06 00 00 00 00" style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <label style="font-size: 0.95rem;">Vos disponibilités pour le rappel</label>
+                    <input type="text" name="disponibilites" placeholder="Ex: En semaine après 17h, le samedi matin..." style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem;">
+                </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <label style="font-weight: bold; color: var(--text-dark);">Votre message / Dates souhaitées *</label>
+                <textarea name="message" rows="6" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; resize: vertical;"></textarea>
+            </div>
+
+            <button type="submit" class="services-block" style="background-color: var(--text-dark, #333); color: white; border: none; padding: 1rem; font-size: 1.1rem; font-weight: bold; cursor: pointer; text-align: center; transition: background 0.2s;">
+                ✉️ Envoyer la demande
+            </button>
+
+        </form>
+    </section>
+
+</main>
+
 
     <footer>
         <p>&copy; 2026 Mon Meublé Touristique - Tous droits réservés.</p>
