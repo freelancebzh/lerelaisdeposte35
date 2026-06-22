@@ -523,3 +523,7 @@ footer {
     margin-right: auto;
     max-width: 800px; /* Évite que le texte s'étale trop sur les grands écrans */
 }
+
+html {
+    scroll-behavior: smooth;
+}
